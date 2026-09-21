@@ -1,0 +1,10 @@
+# Keep text files consistent across Windows, macOS and Linux.
+* text=auto
+*.sh text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
