@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-app);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-mid: var(--brand-mid);
+  --color-brand-light: var(--brand-light);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* GHASILAK brand tokens — deep blue primary, light blue accents, white/light surfaces */
+:root {
+  --brand-deep: #144078;
+  --brand-mid: #2563a8;
+  --brand-light: #5ba8dc;
+  --brand-mist: #eef5fb;
+  --brand-snow: #f7fbff;
+
+  --background: #f7fbff;
+  --foreground: #0f2744;
+  --card: #ffffff;
+  --card-foreground: #0f2744;
+  --popover: #ffffff;
+  --popover-foreground: #0f2744;
+  --primary: #144078;
+  --primary-foreground: #f7fbff;
+  --secondary: #e8f2fa;
+  --secondary-foreground: #144078;
+  --muted: #eef5fb;
+  --muted-foreground: #5a7391;
+  --accent: #d7ecf8;
+  --accent-foreground: #144078;
+  --destructive: oklch(0.55 0.2 25);
+  --border: #d5e4f2;
+  --input: #d5e4f2;
+  --ring: #5ba8dc;
+  --chart-1: #144078;
+  --chart-2: #2563a8;
+  --chart-3: #5ba8dc;
+  --chart-4: #8ec5e8;
+  --chart-5: #0f2744;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f2744;
+  --sidebar-primary: #144078;
+  --sidebar-primary-foreground: #f7fbff;
+  --sidebar-accent: #eef5fb;
+  --sidebar-accent-foreground: #144078;
+  --sidebar-border: #d5e4f2;
+  --sidebar-ring: #5ba8dc;
+
+  --font-app: var(--font-sans-en), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sans-en), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang="ar"] {
+  --font-app: var(--font-sans-ar), "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sans-ar), "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-app);
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
